@@ -6,7 +6,7 @@ document.body.appendChild(getSumBtn);
 const getSum = () => {
 
     const priceElems = document.querySelectorAll(".price");
-	let ansElem = document.querySelector("#ans");
+	
     let total = 0;
     for (let i = 0; i < priceElems.length; i++) {
 	    total += parseFloat(priceElems[i].textContent);
@@ -16,6 +16,7 @@ const getSum = () => {
     let totalPriceRow = table.insertRow(-1);
     let totalPriceCell = totalPriceRow.insertCell(0);
     totalPriceCell.textContent = `Total Price: Rs ${total}`;
+	document.getElementById("ans").disabled = true;
 };
 
 getSumBtn.addEventListener("click", getSum);
