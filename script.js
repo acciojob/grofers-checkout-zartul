@@ -5,11 +5,11 @@ document.body.appendChild(getSumBtn);
 
 const getSum = () => {
 
-    const priceElems = document.querySelectorAll(".price");
+    const prices = document.querySelectorAll(".price");
 	
     let total = 0;
-    for (let i = 0; i < priceElems.length; i++) {
-	    total += parseFloat(priceElems[i].textContent);
+    for (let i = 0; i < prices.length; i++) {
+	    total += parseFloat(prices[i].textContent);
 	}
 
     let table = document.querySelector("table");
